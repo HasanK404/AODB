@@ -8,7 +8,9 @@ app.set("view engine", "ejs")
 
 app.get('/', async (req, res) => {
     const a = await Airlines()
-    res.send (a)
+    res.render ("good.ejs", {
+        a,
+    })
 })
 
 app.use(express.static("public"))

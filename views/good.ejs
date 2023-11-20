@@ -9,6 +9,22 @@
 
         <h2><%= Date() %></h2>
         <p>This is a simple HTML page with some beautiful CSS styling.</p>
+
+        <table>
+            <tr>
+              <th>IATA_Code</th><th>AirlineName</th><th>OrignCountry</th><th>LocalContactEmail</th><th>LocalContactTelephone</th>
+            </tr>
+          
+            <% a.forEach (ai => { %>
+              <tr>
+                <td><%= ai.IATA_Code %></td>
+                <td><%= ai.AirlineName %></td>
+                <td><%= ai.OrignCountry %></td>
+                <td><%= ai.LocalContactEmail %></td>
+                <td><%= ai.LocalContactTelephone %></td>
+              </tr>    
+            <% } )%>
+          </table>
     </div>
 </body>
 </html>
