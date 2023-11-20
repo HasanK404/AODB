@@ -7,7 +7,7 @@ import { Airlines, Arrivals} from './database.js'
 app.set("view engine", "ejs")
 
 app.get('/', async (req, res) => {
-    const a = Airlines()
+    const a = await Airlines()
     res.send (a)
 })
 

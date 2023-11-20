@@ -8,22 +8,25 @@ const pool = mysql.createPool({
   }).promise()
 
 
-  async function Airlines(){
+export async function Airlines(){
      const [result] = await pool.query("SELECT * FROM airlines")
     return(result)
   }
 
-  async function Arrivals(){
+ export async function Arrivals(){
     const [result] = await pool.query("SELECT * FROM aodb.inboundflights")
    return(result)
  }
-  const Air = await Airlines()
+ 
+
+
+ /*const Air = await Airlines()
   const Arv = await Arrivals()
   console.log(Air)
   console.log(Arv)
 
 
-/*
+
 export async function Airlines(){
   con.connect(function(err) {
       con.query("SELECT * FROM airlines", function (err, result, fields) {
