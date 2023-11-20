@@ -1,9 +1,14 @@
-const express = require('express');
+import express from 'express';
 const app = express();
+//const db = require("./database.js")
+
+import { Airlines, Arrivals} from './database.js'
+
 app.set("view engine", "ejs")
 
-app.get('/', (req, res) => {
-    res.render ("good.ejs")
+app.get('/', async (req, res) => {
+    const a = Airlines()
+    res.send (a)
 })
 
 app.use(express.static("public"))
