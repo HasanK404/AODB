@@ -1,8 +1,9 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+app.set("view engine", "ejs")
 
 app.get('/', (req, res) => {
-    res.send ('<h1>${Date()}</h1>')
+    res.render ("good.ejs")
 })
 
 app.use(express.static("public"))
