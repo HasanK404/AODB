@@ -1,7 +1,5 @@
 import express from 'express';
 const app = express();
-//const db = require("./database.js")
-
 import { Airlines, Arrivals} from './database.js'
 
 app.set("view engine", "ejs")
